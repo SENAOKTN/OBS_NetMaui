@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="obsSistemi.MainPage">
+
+    <Grid>
+        <Image Source="arkaplan.png" 
+                HorizontalOptions="Center"/>
+        <StackLayout Padding="50" >
+
+
+            <StackLayout 
+              Spacing="25"
+              HorizontalOptions="Center" 
+              VerticalOptions="Center" >
+
+                <Image Source="logo.png" HeightRequest="150"
+            HorizontalOptions="Center"/>
+
+                <Label Text="Öğrenci Bilgi Sistemi"
+            FontSize="24"
+            TextColor="DarkBlue"
+            HorizontalOptions="Center"/>
+
+                <HorizontalStackLayout Spacing="15" >
+                    <Label Text="Öğrenci No:" TextColor="White"/>
+                    <Entry x:Name="ogrenciNumara" Text="{Binding ogrNo}" Placeholder="Öğrenci Numarası giriniz"
+                WidthRequest="250"
+                    MaxLength="10" BackgroundColor="White"/>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout  Spacing="58" >
+                    <Label Text="Şifre:" TextColor="White"/>
+                    <Entry x:Name="ogrenciSifre" Text="{Binding ogrSifre}" IsPassword="true" Placeholder="Şifre giriniz"
+                   WidthRequest="250" BackgroundColor="White"/>
+                </HorizontalStackLayout>
+                <Button x:Name="GirisBtn"
+                 Text="Giriş Yap"
+                 Clicked="btnGiris_Clicked"
+                 HorizontalOptions="Center"
+                 BackgroundColor="#19638F" />
+            </StackLayout>
+        </StackLayout>
+    </Grid>
+   
+    
+</ContentPage>
